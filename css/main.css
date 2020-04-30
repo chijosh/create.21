@@ -164,6 +164,7 @@ p {
   margin: 0 auto 26px auto;
   line-height: 161%;
   font-size: 18px;
+  text-align: center;
 }
 
 .left-column {
@@ -175,6 +176,17 @@ p {
   background-color: #3ec290;
   border-radius: 4px;
   color: #fff;
+  padding: 16px 38px;
+  text-align: center;
+  border: none;
+}
+
+.hero-btn:hover {
+  width: 230px;
+  height: 54px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  color: #000;
   padding: 16px 38px;
   text-align: center;
   border: none;
@@ -368,6 +380,20 @@ p {
 
 .footer-column.first {
   margin-left: 0px;
+}
+
+.link {
+  color: #555;
+  font-size: 13px;
+}
+
+.text-block-2 {
+  font-size: 15px;
+}
+
+.text-block-3 {
+  margin-top: 140px;
+  font-size: 13px;
 }
 
 @media screen and (max-width: 991px) {
