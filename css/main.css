@@ -200,6 +200,32 @@ p {
   text-align: center;
   border: 1px solid black;
 }
+
+.modal-btn {
+  width: 230px;
+  height: 54px;
+  background-color: #52505e;
+  border-radius: 50px;
+  color: #fff;
+  padding: 16px 38px;
+  text-align: center;
+  border: none;
+  margin-top: 35px;
+  margin: 0 auto;
+}
+
+.modal-btn:hover {
+  background-color: #fff;
+  border-radius: 50px;
+  color: #000;
+  padding: 16px 38px;
+  text-align: center;
+  border: none;
+  margin-top: 35px;
+  margin: 0 auto;
+  transition: 0.4s ease;
+}
+
 .card-container {
   justify-content: flex-start;
 }
@@ -218,6 +244,19 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50px;
+  cursor: pointer;
+}
+
+.round-black:hover {
+  margin-top: 18px;
+  width: 48px;
+  height: 48px;
+  background-color: #85858a;
+  background-image: url("/images/bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
 .round-blue {
@@ -233,9 +272,14 @@ p {
 }
 
 .round-blue:hover {
-  background-color: #5f69a1;
+  margin-top: 18px;
+  width: 42px;
+  height: 42px;
+  background-color: #2c42bb;
   border-radius: 50px;
-  background-image: url("/images/interface.svg");
+  background-image: url("/images/share.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
@@ -341,6 +385,7 @@ p {
 .modal-title {
   margin-left: 18px;
   margin-top: 34px;
+  text-transform: capitalize;
 }
 
 #pop-up {
@@ -361,6 +406,7 @@ p {
 
 .modal-content > .item-content {
   padding-top: 0px;
+  margin-bottom: 36px;
   color: #000;
   margin-top: 14px;
 }

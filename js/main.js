@@ -36,7 +36,7 @@ fetch("https://blog-demo-create.herokuapp.com/comments")
   })
   .catch((err) => console.log("Something went wrong =>", err));
 
-// This function handles modal creation
+// This function handles the modal creation
 function loadCommentWithId(elementId) {
   fetch(`https://blog-demo-create.herokuapp.com/comments/${elementId}`)
     .then((comment) => comment.json())
@@ -49,10 +49,15 @@ function loadCommentWithId(elementId) {
 
       const modalDivHeading = document.createElement("h2");
       const modalDivParagraph = document.createElement("p");
+      const modalBtn = document.createElement("div");
+
+      modalBtn.setAttribute("class", "modal-btn");
       modalDivHeading.setAttribute("class", "item-title modal-title");
       modalDivParagraph.setAttribute("class", "item-content");
       modalDivHeading.textContent = title;
       modalDivParagraph.textContent = content;
-      modalCardContent.append(modalDivHeading, modalDivParagraph);
+      modalBtn.textContent = "SHARE";
+
+      modalCardContent.append(modalDivHeading, modalDivParagraph, modalBtn);
     });
 }
