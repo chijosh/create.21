@@ -11,6 +11,7 @@ fetch("https://blog-demo-create.herokuapp.com/comments")
   })
   .then(() => {
     const cards = document.querySelectorAll(".item-column");
+    const cardBtn = document.querySelectorAll(".card-btn");
 
     cards.forEach((card) => {
       // Handle modal
@@ -18,9 +19,14 @@ fetch("https://blog-demo-create.herokuapp.com/comments")
       card.addEventListener("click", (e) => {
         document.querySelector(".bg-modal").style.display = "flex";
 
-        console.log(e.target.id);
-
-        commentWithId(e.target.id);
+        console.log(e.target.parentElement.id);
+        if (e.target.parentElement.id) {
+          loadCommentWithId(e.target.parentElement.id);
+        } else if (e.target.id) {
+          loadCommentWithId(e.target.id);
+        } else {
+          null;
+        }
         // Close modal
         document.querySelector(".close").addEventListener("click", () => {
           document.querySelector(".bg-modal").style.display = "none";
@@ -30,7 +36,8 @@ fetch("https://blog-demo-create.herokuapp.com/comments")
   })
   .catch((err) => console.log("Something went wrong =>", err));
 
-function commentWithId(elementId) {
+// This function handles modal creation
+function loadCommentWithId(elementId) {
   fetch(`https://blog-demo-create.herokuapp.com/comments/${elementId}`)
     .then((comment) => comment.json())
     .then((commentElement) => {
@@ -40,11 +47,12 @@ function commentWithId(elementId) {
       // Destructure commentElement
       const { video, content, title, id } = commentElement;
 
-      const contentDivElement = document.createElement("p");
-      contentDivElement.setAttribute("class", "item-content");
-      contentDivElement.textContent = content;
-      modalCardContent.append(contentDivElement);
-
-      // modalCardContent.append(content);
+      const modalDivHeading = document.createElement("h2");
+      const modalDivParagraph = document.createElement("p");
+      modalDivHeading.setAttribute("class", "item-title modal-title");
+      modalDivParagraph.setAttribute("class", "item-content");
+      modalDivHeading.textContent = title;
+      modalDivParagraph.textContent = content;
+      modalCardContent.append(modalDivHeading, modalDivParagraph);
     });
 }

@@ -17,6 +17,17 @@ h1 {
   text-align: center;
 }
 
+h2 {
+  margin-top: 14px;
+  margin-bottom: 10px;
+  font-family: Poppins, sans-serif;
+  color: #fff;
+  font-size: 24px;
+  line-height: 128%;
+  font-weight: 500;
+  /* text-align: center; */
+}
+
 h3 {
   margin-top: 0px;
   font-family: Poppins, sans-serif;
@@ -321,13 +332,40 @@ p {
   height: 273px;
   margin: 15px;
   border-radius: 15px;
-  background: white;
+  background: linear-gradient(
+    180deg,
+    #3ec290 100%,
+    rgba(255, 254, 254, 0) 100%
+  );
+  box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.09);
   transition: 0.3s;
 }
 
+.modal-title {
+  margin-left: 18px;
+  margin-top: 34px;
+}
+
+#pop-up {
+  top: -400px;
+  animation: drop 0.5s ease forwards;
+}
+
+@keyframes drop {
+  0% {
+  }
+  70% {
+    transform: translateY(400px);
+  }
+  100% {
+    transform: translateY(350px);
+  }
+}
+
 .modal-content > .item-content {
-  padding-top: 20px;
-  color: #282134;
+  padding-top: 0px;
+  color: #000;
+  margin-top: 14px;
 }
 
 .close {
@@ -587,12 +625,15 @@ p {
     padding-right: 30px;
     padding-left: 30px;
   }
+
   .left-block {
     min-width: auto;
     margin-right: 0px;
+    text-align: -webkit-center;
   }
   .heading {
     font-size: 14vw;
+    text-align: center;
   }
   .button {
     display: block;

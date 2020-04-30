@@ -23,10 +23,8 @@ body {
 }
 
 .main-header {
-  /* position: fixed; */
   top: 0;
   left: 0;
-  /* background: #2ddf56; */
   padding: 0.9rem 1rem;
   z-index: 1;
 }

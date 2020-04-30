@@ -2,18 +2,27 @@
 <html lang="en">
 
 <head>
+    <!--========= Basic Page Needs =========-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--====== Custom CSS for themes =======-->
     <link rel="stylesheet" href="css/normalise.css">
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!--========== Fonts =========-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i|Roboto&display=swap"
         rel="stylesheet">
+
+    <!--======== Page Title===========-->
     <title>Create.21 Task</title>
 </head>
 
 <body>
+    <!--====Header Section==========-->
+
+    <!-- Navigation area start -->
     <div class="backdrop"></div>
     <div class="nav-section">
         <div class="container">
@@ -34,7 +43,7 @@
                             <a href="index.html">Home</a>
                         </li>
                         <li class="main-nav__item">
-                            <a href="#">Services</a>
+                            <a href="#services">Services</a>
                         </li>
                         <li class="main-nav__item main-nav__item--cta">
                             <a href="#">Sign Up</a>
@@ -56,13 +65,15 @@
                 </li>
             </ul>
         </nav>
+    </div>
+    <!-- Navigation area end -->
 
-    </div>
-    </div>
+    <!-- Hero-content area start -->
     <div class="hero-section">
         <div class="container">
             <div class="flexbox hero-flexbox">
                 <div class="left-block">
+                    <h2>Product Video Reviews</h2>
                     <h1 class="heading">A better way to review.</h1>
                     <p class="heading-paragraph">View and read reviews before making your purchase.</p>
                     <div class="hero-btn">Try it for free</div>
@@ -77,7 +88,13 @@
             </div>
         </div>
     </div>
-    <section class="section main">
+
+    <!-- Hero-content area end -->
+
+    <!--====Header Section End=======-->
+
+    <!--====Card Section Start=======-->
+    <section id="services" class="section main">
         <div class="container center">
             <div>
                 <h1>Read Popular Reviews</h1>
@@ -95,6 +112,9 @@
             <div id="pagination" class="pagination"></div>
         </div>
     </section>
+    <!--====Card Section End=======-->
+
+    <!--====CTA Section Start=======-->
     <section class="flexbox cta-flexbox">
         <div class="container">
             <div class="flexbox">
@@ -107,25 +127,23 @@
                 </div>
             </div>
         </div>
-        </div>
-
-        </div>
-
     </section>
-    <section class="section footer">
-        <div class="container">
-            <div class="flexbox">
-            </div>
-        </div>
-    </section>
+    <!--====CTA Section End=======-->
+
+
+
+
+    <!--====Card Modal =======-->
     <div class="bg-modal">
-        <div class="modal-container">
+        <div class="modal-container" id="pop-up">
             <div class="close">+</div>
             <div class="modal-content">
 
             </div>
         </div>
     </div>
+
+    <!--====Footer Section Start=======-->
     <div class="section footer-section">
         <div class="container">
             <div class="flexbox footer">
@@ -162,6 +180,9 @@
             <div class="text-block-3">© Copyright Product Video Reviews Inc</div>
         </div>
     </div>
+    <!--====Footer Section Start=======-->
+
+    <!--====Site Scripts =======-->
     <script src="js/shared.js"></script>
     <script src="js/main.js"></script>
     <script src="js/CommentClass.js"></script>
