@@ -63,7 +63,6 @@ class CommentClass {
 
     button.addEventListener("click", () => {
       this.current_page = page;
-      console.log(this.current_page);
 
       this.func(this.commentObj, commentElement, this.rows, this.current_page);
 
