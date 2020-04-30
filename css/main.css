@@ -396,6 +396,10 @@ p {
   font-size: 13px;
 }
 
+.image-2 {
+  max-width: 597px;
+}
+
 @media screen and (max-width: 991px) {
   .section.footer-section {
     padding-top: 60px;
@@ -457,7 +461,7 @@ p {
     margin-top: 60px;
   }
   .image-2 {
-    min-width: auto;
+    max-width: 317px;
   }
   .heading-3 {
     font-size: 35px;
