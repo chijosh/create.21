@@ -122,7 +122,7 @@ p {
   background-color: #000;
 }
 
-.left-block {
+.hero-section__left-block {
   min-width: 400px;
   margin-right: 60px;
   margin-bottom: 100px;
@@ -152,7 +152,7 @@ p {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.09);
 }
 
-.heading {
+.hero-section__heading {
   padding-top: 20px;
   color: #fff;
   text-align: left;
@@ -161,7 +161,7 @@ p {
   line-height: 67px;
 }
 
-.heading-paragraph {
+.hero-section__paragraph {
   margin-bottom: 10px;
   font-family: Roboto, sans-serif;
   font-size: 12px;
@@ -179,9 +179,6 @@ p {
   text-align: center;
 }
 
-.left-column {
-  align-items: center;
-}
 .hero-btn {
   width: 230px;
   height: 54px;
@@ -278,7 +275,7 @@ p {
 }
 
 .pagination {
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -439,7 +436,7 @@ p {
   font-size: 13px;
 }
 
-.image-2 {
+.hero-section__right-block__image {
   max-width: auto;
 }
 
@@ -450,7 +447,7 @@ p {
     padding-bottom: 60px;
   }
 
-  .image-2 {
+  .hero-section__right-block__image {
     max-width: 375px;
   }
 }
@@ -474,11 +471,12 @@ p {
     padding-top: 90px;
     padding-bottom: 90px;
   }
-  .left-block {
+  .hero-section__left-block {
     min-width: 322px;
     margin-bottom: 40px;
   }
-  .heading {
+
+  .hero-section__heading {
     width: auto;
     font-size: 60px;
   }
@@ -515,11 +513,8 @@ p {
   .text-block-3 {
     margin-top: 60px;
   }
-  .image-2 {
+  .hero-section__right-block__image {
     max-width: 317px;
-  }
-  .heading-3 {
-    font-size: 35px;
   }
 }
 
@@ -626,12 +621,7 @@ p {
     padding-left: 30px;
   }
 
-  .left-block {
-    min-width: auto;
-    margin-right: 0px;
-    text-align: -webkit-center;
-  }
-  .heading {
+  .hero-section__heading {
     font-size: 14vw;
     text-align: center;
   }
@@ -658,10 +648,18 @@ p {
     padding-right: 30px;
     padding-left: 30px;
   }
-  .heading-3 {
-    font-size: 27px;
-  }
-  .image-2 {
+
+  .hero-section__right-block__image {
     max-width: 100%;
+  }
+
+  .hero-section__left-block {
+    text-align: center;
+    margin-right: 0;
+    text-align: -webkit-center;
+  }
+
+  .card-btn {
+    transform: translate(10%, 140%);
   }
 }
