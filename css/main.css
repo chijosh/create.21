@@ -138,6 +138,7 @@ p {
     rgba(130, 130, 130, 0.530769) 86.98%,
     rgba(224, 224, 224, 0) 100%
   );
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.09);
 }
 
 .heading {
@@ -189,7 +190,7 @@ p {
   color: #000;
   padding: 16px 38px;
   text-align: center;
-  border: none;
+  border: 1px solid black;
 }
 .card-container {
   justify-content: flex-start;
@@ -205,6 +206,9 @@ p {
   width: 48px;
   height: 48px;
   background-color: #504e5c;
+  background-image: url("/images/bookmark.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 50px;
 }
 
@@ -214,7 +218,7 @@ p {
   height: 42px;
   background-color: #5871f6;
   border-radius: 50px;
-  background-image: url("/images/interface.svg");
+  background-image: url("/images/share.svg");
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
@@ -236,12 +240,13 @@ p {
 .item-content {
   color: aliceblue;
   margin-left: 18px;
+  margin-top: 59px;
   font-family: "Poppins", sans-serif;
 }
 
 .card-btn {
   text-decoration: none;
-  transform: translate(30%, 230%);
+  transform: translate(30%, 140%);
   border: 0;
   background: #52505e;
   border-radius: 26px;
@@ -253,7 +258,7 @@ p {
 .card-btn:hover {
   color: #282134;
   text-decoration: none;
-  transform: translate(30%, 230%);
+  transform: translate(30%, 140%);
   border: 0;
   background: #b4b2bd;
   border-radius: 26px;
@@ -397,7 +402,19 @@ p {
 }
 
 .image-2 {
-  max-width: 597px;
+  max-width: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .image-2 {
+    max-width: 375px;
+  }
 }
 
 @media screen and (max-width: 991px) {
