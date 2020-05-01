@@ -711,7 +711,12 @@ p {
     text-align: -webkit-center;
   }
 
-  .card-btn {
-    transform: translate(10%, 140%);
+  .modal-container {
+    width: 368px;
+    height: 403px;
+  }
+
+  .modal-video {
+    margin: 0 60px;
   }
 }
