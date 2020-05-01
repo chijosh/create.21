@@ -226,6 +226,12 @@ p {
   transition: 0.4s ease;
 }
 
+.modal-video {
+  width: 250px;
+  border-radius: 10px;
+  margin: 0 100px;
+}
+
 .card-container {
   justify-content: flex-start;
 }
@@ -370,7 +376,7 @@ p {
   position: relative;
   top: 10%;
   width: 468px;
-  height: 273px;
+  height: 403px;
   margin: 15px;
   border-radius: 15px;
   background: linear-gradient(

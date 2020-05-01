@@ -6,7 +6,7 @@ fetch("https://blog-demo-create.herokuapp.com/comments")
   .then((comment) => comment.json())
   .then((el) => {
     let data = new CommentClass(el, pagination);
-    data.renderData();
+    data.renderComment;
     data.renderPagination;
   })
   .then(() => {
@@ -30,6 +30,9 @@ fetch("https://blog-demo-create.herokuapp.com/comments")
         // Close modal
         document.querySelector(".close").addEventListener("click", () => {
           document.querySelector(".bg-modal").style.display = "none";
+
+          // Pause video on modal close
+          document.querySelector(".modal-video").pause();
         });
       });
     });
@@ -50,14 +53,30 @@ function loadCommentWithId(elementId) {
       const modalDivHeading = document.createElement("h2");
       const modalDivParagraph = document.createElement("p");
       const modalBtn = document.createElement("div");
+      const modalVideo = document.createElement("video");
+      const modalVideoSource = document.createElement("source");
+
+      modalVideo.setAttribute("width", "420");
+      modalVideo.setAttribute("class", "modal-video");
+      modalVideo.setAttribute("controls", "");
+      modalVideo.setAttribute("autoplay", "");
+      modalVideoSource.setAttribute("src", `/video${video}`);
+      modalVideoSource.setAttribute("type", "video/mp4");
 
       modalBtn.setAttribute("class", "modal-btn");
       modalDivHeading.setAttribute("class", "item-title modal-title");
       modalDivParagraph.setAttribute("class", "item-content");
+
+      modalVideo.append(modalVideoSource);
       modalDivHeading.textContent = title;
       modalDivParagraph.textContent = content;
       modalBtn.textContent = "SHARE";
 
-      modalCardContent.append(modalDivHeading, modalDivParagraph, modalBtn);
+      modalCardContent.append(
+        modalDivHeading,
+        modalDivParagraph,
+        modalVideo,
+        modalBtn
+      );
     });
 }
