@@ -78,5 +78,6 @@ function loadCommentWithId(elementId) {
         modalVideo,
         modalBtn
       );
-    });
+    })
+    .catch((err) => console.log("Error =>", err));
 }

@@ -25,7 +25,6 @@ h2 {
   font-size: 24px;
   line-height: 128%;
   font-weight: 500;
-  /* text-align: center; */
 }
 
 h3 {
@@ -46,7 +45,6 @@ p {
 }
 
 .subtitle {
-  /* margin-bottom: 10px; */
   font-family: Roboto, sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -519,13 +517,13 @@ p {
     justify-content: flex-start;
   }
   .hero-section {
-    min-height: auto;
-    padding-top: 90px;
-    padding-bottom: 90px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   .hero-section__left-block {
     min-width: 322px;
     margin-bottom: 40px;
+    margin-right: 50px;
   }
 
   .hero-section__heading {
@@ -571,6 +569,23 @@ p {
 }
 
 @media screen and (max-width: 767px) {
+  .main-header__brand {
+    margin-left: 30px;
+  }
+
+  .flexbox.hero-flexbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+  }
+  .hero-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero-section__left-block {
+    margin-right: 10px;
+  }
+
   .section.cta-section {
     padding-top: 30px;
     padding-bottom: 30px;
@@ -588,17 +603,7 @@ p {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  .flexbox.hero-flexbox {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-  }
-  .hero-section {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+
   .div-block-1 {
     max-width: 580px;
   }
@@ -638,14 +643,7 @@ p {
   .icon {
     color: rgba(235, 237, 239, 0.7);
   }
-  .menu-button {
-    margin-top: 20px;
-  }
-  .menu-button.w--open {
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    background-color: #2b353e;
-  }
+
   .nav-menu {
     padding: 30px 60px;
     background-color: #2b353e;
@@ -655,7 +653,29 @@ p {
   }
 }
 
+@media screen and (max-width: 690px) {
+  .flexbox.hero-flexbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 479px) {
+  .main-header__brand {
+    margin-left: 0;
+  }
+
+  .flexbox.hero-flexbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
   .section.cta-section {
     padding-right: 30px;
     padding-left: 30px;
@@ -718,5 +738,14 @@ p {
 
   .modal-video {
     margin: 0 60px;
+  }
+
+  @media screen and (max-width: 375px) {
+    .main-header__brand {
+      margin-left: 0;
+    }
+    .section {
+      padding: 0;
+    }
   }
 }

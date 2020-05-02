@@ -1,3 +1,22 @@
+/*
+This CommentClass handles the creation of the Comment cards, as well as the pagination.
+The class constructor takes in two params, the entire comment objects and the pagination element from the DOM.
+
+Class fields:
+commentObj = comments // Comment object from the fetch API
+current_page = 1
+rows = 6
+pagination = pagination // html DOM element
+
+
+Class Methods: 
+renderData() // Make data available to the fields from outside the class
+displayList() // Handles pagination. Takes in four params: commentObj, HTML wrapper, rows_per_page, page.
+setupPagination() // Create page list
+paginationButton(page, cb) // Create page buttons. Takes in two params, number of pages and a callback func.
+addComp(data) // Creates html card component.
+*/
+
 class CommentClass {
   constructor(comments, pagination) {
     this.commentObj = comments;
@@ -25,13 +44,13 @@ class CommentClass {
   }
 
   // Handle pagination
-  displayList(items, wrapper, rows_per_page, page) {
+  displayList(commentObj, wrapper, rows_per_page, page) {
     wrapper.innerHTML = "";
     page--;
 
     let start = rows_per_page * page;
     let end = start + rows_per_page;
-    let paginatedItems = items.slice(start, end);
+    let paginatedItems = commentObj.slice(start, end);
 
     for (let i = 0; i < paginatedItems.length; i++) {
       let item = paginatedItems[i];
@@ -39,7 +58,7 @@ class CommentClass {
     }
   }
 
-  // Create page
+  // Create page list
   setupPagination() {
     let wrapper = this.pagination;
 
