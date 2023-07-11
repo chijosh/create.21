@@ -64,7 +64,7 @@ class CommentClass {
 
     wrapper.innerHTML = "";
 
-    let page_count = Math.ceil(this.commentObj.length / this.rows);
+    let page_count = Math.ceil(this.commentObj.comments.length / this.rows);
 
     for (let i = 1; i < page_count + 1; i++) {
       let btn = this.paginationButton(i, this.displayList);
