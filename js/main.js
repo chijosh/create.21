@@ -2,7 +2,17 @@ const commentElement = document.querySelector(".list-mount");
 const pagination = document.getElementById("pagination");
 
 let data123;
-fetch("https://simple-nestjs-api.onrender.com/api/v1/comments")
+fetch("https://simple-nestjs-api.onrender.com/api/v1/comments", {
+  method: "GET",
+})
+// For local dev
+/* fetch("http://localhost:3000/api/v1/comments", {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "http://localhost:3000",
+  },
+}) */
   .then((comment) => comment.json())
   .then((el) => {
     let data = new CommentClass(el, pagination);
@@ -41,9 +51,24 @@ fetch("https://simple-nestjs-api.onrender.com/api/v1/comments")
 
 // This function handles the modal creation
 function loadCommentWithId(elementId) {
-  fetch(`https://blog-demo-create.herokuapp.com/comments/${elementId}`)
+  fetch(`https://simple-nestjs-api.onrender.com/api/v1/comments/id=${elementId}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+  // For local dev
+/*   fetch(`http://localhost:3000/api/v1/comments/id=${elementId}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "http://localhost:3000",
+    },
+  }) */
     .then((comment) => comment.json())
     .then((commentElement) => {
+
+      console.log({commentElement});
       let modalCardContent = document.querySelector(".modal-content");
       modalCardContent.innerHTML = "";
 
@@ -60,7 +85,7 @@ function loadCommentWithId(elementId) {
       modalVideo.setAttribute("class", "modal-video");
       modalVideo.setAttribute("controls", "");
       modalVideo.setAttribute("autoplay", "");
-      modalVideoSource.setAttribute("src", `/video${video}`);
+      modalVideoSource.setAttribute("src", `/video/${video}`);
       modalVideoSource.setAttribute("type", "video/mp4");
 
       modalBtn.setAttribute("class", "modal-btn");

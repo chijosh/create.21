@@ -50,7 +50,7 @@ class CommentClass {
 
     let start = rows_per_page * page;
     let end = start + rows_per_page;
-    let paginatedItems = commentObj.slice(start, end);
+    let paginatedItems = commentObj.comments.slice(start, end);
 
     for (let i = 0; i < paginatedItems.length; i++) {
       let item = paginatedItems[i];
