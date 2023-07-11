@@ -2,7 +2,7 @@ const commentElement = document.querySelector(".list-mount");
 const pagination = document.getElementById("pagination");
 
 let data123;
-fetch("https://blog-demo-create.herokuapp.com/comments")
+fetch("https://simple-nestjs-api.onrender.com/api/v1/comments")
   .then((comment) => comment.json())
   .then((el) => {
     let data = new CommentClass(el, pagination);
